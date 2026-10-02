@@ -1,0 +1,23 @@
+name: "browser-navigator"
+description: "Navigates browser tabs, manages session history, switches contexts, and controls active web page URLs."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "navigate"
+        - "go_back"
+        - "refresh"
+        - "switch_tab"
+        - "close_tab"
+        - "new_tab"
+      description: "Navigation or tab lifecycle action to perform."
+    url:
+      type: string
+      description: "Target URL to open or navigate to."
+    tab_id:
+      type: integer
+      description: "Target tab index when switching or closing tabs."
+  required:
+    - action

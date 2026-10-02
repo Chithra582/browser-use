@@ -1,7 +1,8 @@
 ---
 name: remote-browser
-description: Controls an isolated Browser Use Cloud browser from a sandboxed machine with the current Browser Use CLI.
-allowed-tools: Bash(browser-use:*)
+description: "Controls an isolated Browser Use Cloud browser from a sandboxed machine with the current Browser Use CLI."
+allowed-tools: Bash
+license: MIT
 ---
 
 # Remote Browser

@@ -1,0 +1,33 @@
+name: "element-interactor"
+description: "Interacts with interactive DOM elements via clicks, text inputs, file uploads, and key presses."
+input_schema:
+  type: object
+  properties:
+    action:
+      type: string
+      enum:
+        - "click"
+        - "input_text"
+        - "upload_file"
+        - "send_keys"
+        - "hover"
+      description: "User interaction primitive to perform."
+    index:
+      type: integer
+      description: "Deterministic index of the target interactive element in the accessibility tree."
+    coordinate:
+      type: object
+      properties:
+        x:
+          type: integer
+        y:
+          type: integer
+      description: "Pixel coordinates for coordinate-based click or hover."
+    text:
+      type: string
+      description: "Text content to enter or key sequence to send."
+    file_path:
+      type: string
+      description: "File path to upload when action is upload_file."
+  required:
+    - action

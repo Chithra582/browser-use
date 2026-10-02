@@ -1,0 +1,22 @@
+name: "page-scroller"
+description: "Scrolls the viewport horizontally or vertically by pixel delta, page steps, or into element view."
+input_schema:
+  type: object
+  properties:
+    direction:
+      type: string
+      enum:
+        - "up"
+        - "down"
+        - "left"
+        - "right"
+      description: "Scroll direction relative to the current viewport."
+    amount:
+      type: integer
+      description: "Scroll distance in pixels or percentage of viewport height."
+      default: 500
+    target_element_index:
+      type: integer
+      description: "Optional index of element to scroll directly into the visible viewport."
+  required:
+    - direction

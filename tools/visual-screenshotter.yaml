@@ -1,0 +1,14 @@
+name: "visual-screenshotter"
+description: "Captures full-page or viewport screenshots to support multimodal visual grounding and verification."
+input_schema:
+  type: object
+  properties:
+    full_page:
+      type: boolean
+      description: "Whether to capture the entire scrollable page height or active visible viewport."
+      default: false
+    annotate_elements:
+      type: boolean
+      description: "Whether to paint numeric bounding boxes over interactive elements."
+      default: true
+  required: []
